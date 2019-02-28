@@ -1,6 +1,6 @@
+import numpy as np
 from astropy.io import ascii
 import matplotlib.pyplot as plt
-import numpy as np
 
 run1 = ascii.read('19022019 First Cooldown Clean.txt')
 run2 = ascii.read('calA cleaner.txt')
