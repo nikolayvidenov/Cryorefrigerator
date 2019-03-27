@@ -88,11 +88,6 @@ X538_table = ascii.read('X538 Calibration Coefficients.txt', data_start=2, heade
 
 def X538(R, thermometer):
     f = np.poly1d(X538_table[thermometer])
-    print(f)
-    print('T=10**(', end = ' ')
-    for i in range(0, len(f)+1,1):
-        print('(',f[i], ')*log(R)**(', i, end=')+')
-
     return 10**( f(np.log10(R)) )
 
 def X53853(R):
